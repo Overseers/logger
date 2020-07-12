@@ -1,0 +1,49 @@
+{
+  "name": "@overseers/logger",
+  "version": "0.0.1",
+  "description": "A console.log wrapper to easily provide more to your logs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run clean && tsc",
+    "build:watch": "npm run clean && npm run watch",
+    "watch": "tsc -w",
+    "clean": "rimraf dist/",
+    "publish:patch": "tsc && npm version patch --no-git-tag-version && npm publish",
+    "example": "npm run build && node dist/example/index.js",
+    "forceRun": "bash -c '$*'"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Overseers/logger.git"
+  },
+  "keywords": [
+    "tch",
+    "tedious",
+    "connection",
+    "handler"
+  ],
+  "author": "Overseers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Overseers/logger/issues"
+  },
+  "homepage": "https://github.com/Overseers/logger#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/moment": "^2.13.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.10.2",
+    "ts-node-dev": "^1.0.0-pre.50",
+    "typescript": "^3.9.6"
+  },
+  "dependencies": {
+    "moment": "^2.27.0"
+  }
+}
